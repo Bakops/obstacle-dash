@@ -1,0 +1,113 @@
+* {
+  margin-top: 0%;
+}
+
+body {
+  background-color: black;
+}
+
+.control {
+  display: flex;
+  gap: 25px;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+}
+
+.JEU {
+  position: relative;
+  left: 15%;
+  top: 40px;
+  width: 70%;
+  height: 550px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.control button {
+  cursor: pointer;
+  border-radius: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+}
+
+.control button:hover {
+  background: #fff;
+  color: #000000;
+}
+
+.perso {
+  width: 10%;
+  position: relative;
+  top: 60%;
+  left: 5%;
+}
+
+.perso img {
+  width: 100%;
+}
+
+.obstacle {
+  position: relative;
+  top: 75%;
+  left: 90%;
+  width: 5%;
+  transform: rotate(165deg);
+}
+
+.obstacle img {
+  width: 100%;
+}
+
+.ground {
+  position: relative;
+  top: 60%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 1px;
+  width: 90%;
+}
+
+.animations-obstacle {
+  animation: anime-obstacle 1.5s infinite;
+}
+
+.animations-perso {
+  animation: perso-saut 600ms infinite;
+}
+
+/*Animations personnage saut*/
+@keyframes perso-saut {
+  0% {
+    top: 62%;
+  }
+  25% {
+    top: 30%;
+  }
+  50% {
+    top: 30%;
+  }
+  100% {
+    top: 60%;
+  }
+}
+
+/*Animations obstacle*/
+@keyframes anime-obstacle {
+  0% {
+    left: 90%;
+  }
+
+  100% {
+    left: 2%;
+  }
+}
